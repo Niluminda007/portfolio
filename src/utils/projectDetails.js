@@ -211,24 +211,24 @@ export const projectsCoverDetails = [
     index: 1,
     name: "E-Commerce",
     url: "./work/work-cover/e-commerce.png",
-    path: "/projects/e-commerce",
+    path: "/portfolio/projects/e-commerce",
   },
   {
     index: 2,
     name: "E-Resource",
     url: "./work/work-cover/e-resource.jpg",
-    path: "/projects/e-resource",
+    path: "/portfolio/projects/e-resource",
   },
   {
     index: 3,
     name: "Todo",
     url: "./work/work-cover/todo.jpg",
-    path: "/projects/todo",
+    path: "/portfolio/projects/todo",
   },
   {
     index: 4,
     name: "Wordle",
     url: "./work/work-cover/wordle-2.jpg",
-    path: "/projects/wordle",
+    path: "/portfolio/projects/wordle",
   },
 ];
