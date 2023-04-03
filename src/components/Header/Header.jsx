@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export const Header = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/");
+    navigate("/portfolio/");
   };
   return (
     <nav className="header px-16 py-8 xs:p-8">
