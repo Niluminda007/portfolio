@@ -1,0 +1,35 @@
+#rssBlock {
+  height: 200px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  overflow: hidden;
+}
+
+.cnnContents {
+  width: 100%;
+  padding-top: 20px;
+  margin: 0 auto;
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Museo";
+  font-weight: 300;
+}
+
+.marqueeStyle {
+  display: inline-block;
+  animation: scrolling-left1 5s linear infinite;
+}
+
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}

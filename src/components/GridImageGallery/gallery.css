@@ -1,0 +1,97 @@
+.grid {
+  flex: 0 0 auto;
+  perspective: 600px;
+  display: grid;
+  grid-gap: 25px;
+  transform: rotate(45deg);
+}
+.img {
+  background: white;
+  padding: 20px;
+  box-shadow: 10px 20px 30px rgba(128, 43, 177, 0.3);
+  border-radius: 2px;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  filter: grayscale(100%);
+}
+
+.project-image-filter {
+  /* filter: hue-rotate(66deg); */
+}
+.img:nth-child(odd) {
+  animation: 1000ms ease-in-out infinite alternate pulse;
+  /* pan-image-2 12s infinite linear; */
+}
+
+.img:nth-child(even) {
+  animation: 1000ms 1000ms ease-in-out infinite alternate pulse;
+  /* pan-image-2 12s infinite linear; */
+}
+
+@keyframes pulse {
+  to {
+    transform: translate3d(0px, 0px, -60px);
+    box-shadow: 15px 15px 20px -20px rgba(rgb(214, 57, 232), 0.8);
+  }
+}
+
+.active-image {
+  filter: grayscale(100%);
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.active-image:hover {
+  filter: grayscale(2%);
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.2s all linear;
+  opacity: 0.4;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+@keyframes move-ovelay {
+  0% {
+    background-position: 50% 50%;
+    background-size: 100%;
+  }
+  50% {
+    background-position: 40% 40%;
+    background-size: 125%;
+  }
+
+  100% {
+    background-position: 60% 60%;
+    background-size: 150%;
+  }
+}

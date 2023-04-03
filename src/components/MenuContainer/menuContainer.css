@@ -1,0 +1,60 @@
+.menuButton {
+  display: flex;
+  cursor: pointer;
+}
+.menuButton__text {
+  position: relative;
+  right: 4rem;
+  letter-spacing: 0.3em;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+
+.menuButton__icon {
+  position: relative;
+}
+
+.menuButton__icon_shape-1 {
+  z-index: 10;
+}
+
+.menuButton__icon_shape-1,
+.menuButton__icon_shape-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-color: transparent;
+  border: 0.0625rem solid #fff;
+  transform: rotate(45deg);
+  transition: all 0.2s linear;
+}
+
+.menuButton__icon:hover .menuButton__icon_shape-1 {
+  transform: rotate(45deg) scale(0.2, 0.2);
+  background-color: #fff;
+}
+.menuButton__icon:hover .menuButton__icon_shape-2 {
+  transform: rotate(45deg) scale(2, 2);
+}
+.menuButton__text:hover + .menuButton__icon .menuButton__icon_shape-1 {
+  transform: rotate(45deg) scale(0.2, 0.2);
+  background-color: #fff;
+}
+.menuButton__text:hover + .menuButton__icon .menuButton__icon_shape-2 {
+  transform: rotate(45deg) scale(2, 2);
+}
+.menuButton:hover .menuButton__text {
+  opacity: 0.5;
+  transform: translateX(-10px);
+}
+.menuButton__text:hover {
+  opacity: 0.5;
+  transform: translateX(-10px);
+}
+
+.menuButton__adjust {
+  transform: rotate(45deg) !important;
+  background-color: transparent !important;
+}

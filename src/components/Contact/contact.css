@@ -1,0 +1,13 @@
+.contact {
+  background: transparent;
+  margin: 0px;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  z-index: 10000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
+}

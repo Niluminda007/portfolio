@@ -1,0 +1,15 @@
+.specialHeading {
+  /* font-size: 5rem;
+  color: #d1d7e0; */
+  font-family: "Space Mono", monospace;
+  z-index: 3;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  cursor: pointer;
+  transition: all 0.1s linear;
+  /* width: 60%; */
+}
+.specialHeading:hover {
+  color: #0b0c10;
+  background-color: #d1d7e0;
+  opacity: 0.3;
+}

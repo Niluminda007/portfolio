@@ -1,0 +1,93 @@
+.hexagon {
+  width: 100px;
+  height: 55px;
+  background: #ffffff;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid #ffffff;
+}
+
+.hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid #ffffff;
+}
+
+.overlay-icon {
+  width: 100px;
+  height: 55px;
+  background: #802bb1;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overlay-icon::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid #802bb1;
+}
+
+.overlay-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid #802bb1;
+}
+
+.icon-container {
+  position: relative;
+  scale: 0.7;
+  background: transparent;
+}
+
+#second {
+  scale: 0.9;
+  background-color: black;
+}
+
+#second::before {
+  border-bottom: 25px solid black;
+}
+
+#second::after {
+  border-top: 25px solid black;
+}
+#first {
+  scale: 1.4;
+  top: 110px;
+}
+#second {
+  scale: 1.2;
+  top: 55px;
+}
