@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-Fi Display No.2
+* source:	https://sketchfab.com/3d-models/sci-fi-display-no2-7313cebf3ee74c0cac411c4ad9e6938b
+* author:	Bogdan Kuznetsov (https://sketchfab.com/kzn.bog)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-Fi Display No.2" (https://sketchfab.com/3d-models/sci-fi-display-no2-7313cebf3ee74c0cac411c4ad9e6938b) by Bogdan Kuznetsov (https://sketchfab.com/kzn.bog) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
