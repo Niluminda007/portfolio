@@ -1,41 +1,34 @@
-name: Deploy
+name: CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [master]
+  workflow_dispatch:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
-     - name: install
+      - name: install
         run: npm i --legacy-peer-deps
 
-      - name: Build project
+      - name: build
         run: npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
+      - name: deploy pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          name: production-files
-          path: ./dist
+          branch: gh-pages
+          folder: ./dist
 
   deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
 
     steps:
       - name: Download artifact
