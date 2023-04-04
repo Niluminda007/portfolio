@@ -39,7 +39,7 @@ export const ProjectsScroll = () => {
       <div
         className={`${
           toggleMenu ? "z-[0]" : "z-[30]"
-        }  fixed top-[7.5rem] bg-[dark] flex gap-10  justify-center items-center wrap`}
+        }  fixed top-[7.5rem] bg-[dark] flex gap-10  justify-center items-center`}
       >
         <div className="wrapper overflow-x-hidden relative h-[100vh] w-[100vw]">
           <div ref={rootRef} className="container w-[240vw] h-[80vh] flex">
