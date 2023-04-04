@@ -15,10 +15,10 @@ export const projects = [
     id: "e-commerce",
     name: "E-Commerce-Site",
     imgUrls: [
-      "./work/work-inside/e-store/estore_1.JPG",
-      "./work/work-inside/e-store/estore_2.JPG",
-      "./work/work-inside/e-store/estore_3.JPG",
-      "./work/work-inside/e-store/estore_4.JPG",
+      "/work/work-inside/e-store/estore_1.JPG",
+      "/work/work-inside/e-store/estore_2.JPG",
+      "/work/work-inside/e-store/estore_3.JPG",
+      "/work/work-inside/e-store/estore_4.JPG",
     ],
 
     technologies: [
@@ -52,13 +52,13 @@ export const projects = [
     id: "e-resource",
     name: "E-Resource Repository",
     imgUrls: [
-      "./work/work-inside/e-resource/eResource_1.JPG",
-      "./work/work-inside/e-resource/eResource_2.JPG",
-      "./work/work-inside/e-resource/eResource_3.JPG",
-      "./work/work-inside/e-resource/eResource_4.JPG",
-      "./work/work-inside/e-resource/eResource_5.JPG",
-      "./work/work-inside/e-resource/eResource_6.JPG",
-      "./work/work-inside/e-resource/eResource_7.JPG",
+      "/work/work-inside/e-resource/eResource_1.JPG",
+      "/work/work-inside/e-resource/eResource_2.JPG",
+      "/work/work-inside/e-resource/eResource_3.JPG",
+      "/work/work-inside/e-resource/eResource_4.JPG",
+      "/work/work-inside/e-resource/eResource_5.JPG",
+      "/work/work-inside/e-resource/eResource_6.JPG",
+      "/work/work-inside/e-resource/eResource_7.JPG",
     ],
     technologies: [
       {
@@ -100,8 +100,8 @@ export const projects = [
     id: "wordle",
     name: "Wordle Game",
     imgUrls: [
-      "./work/work-inside/wordle/wordle_1.JPG",
-      "./work/work-inside/wordle/wordle_2.JPG",
+      "/work/work-inside/wordle/wordle_1.JPG",
+      "/work/work-inside/wordle/wordle_2.JPG",
     ],
     technologies: [
       {
@@ -136,8 +136,8 @@ export const projects = [
     id: "todo",
     name: "Todo App",
     imgUrls: [
-      "./work/work-inside/todo/todo_1.jpg",
-      "./projectIm/todo/todo_2.jpg",
+      "/work/work-inside/todo/todo_1.jpg",
+      "/projectIm/todo/todo_2.jpg",
     ],
     technologies: [
       {

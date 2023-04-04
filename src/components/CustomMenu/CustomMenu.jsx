@@ -18,7 +18,7 @@ export const CustomMenu = () => {
         toggleMenu ? "opacity-100 z-[10000]" : "opacity-0 -z-[1]"
       }  bg-[#121212] p-8 sm:p-4`}
     >
-      <h1 className="menu__heading text-[#D1D7E0] sm:text-[3rem] md:text-[4rem] xs:text-[2rem] text-[5rem] bg-[#802BB1] w-[40%]  rounded-l mb-8 xs:mb:4 pl-4">
+      <h1 className="menu__heading text-[#D1D7E0] sm:text-[3rem] md:text-[4rem] xs:text-[2rem] text-[5rem] bg-[#802BB1] w-[40%]  rounded-l mb-8 xs:mb-4 pl-4">
         Menu
       </h1>
       <div className="menu__items">
