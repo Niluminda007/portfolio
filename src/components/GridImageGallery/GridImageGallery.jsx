@@ -60,7 +60,7 @@ export const GridImageGallery = ({ images }) => {
                 key={index}
                 className="img h-[100%] w-[100%] overflow-hidden "
                 style={{
-                  background,
+                  background: background,
                   filter: "unset",
                 }}
               ></div>
