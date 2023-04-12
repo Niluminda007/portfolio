@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./project.css";
 import Tech from "../Tech/Tech";
 import { GridImageGallery } from "../GridImageGallery/GridImageGallery";
+import { Skills } from "../Skills/Skills";
+import { AppContext } from "../../context/context";
 
 export const Project = ({ project }) => {
+  const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
   return (
-    <div className="project">
+    <div className={`${toggleMenu ? "z-[0]" : "z-[100]"} project`}>
       <div className="project__details">
         <div className="project__details__label">
           Name
@@ -36,7 +39,8 @@ export const Project = ({ project }) => {
           id="tech"
           className="project__details__text project__details__text-small"
         >
-          <Tech technologies={project.technologies} />
+          <Skills technologies={project.technologies} name="project" />
+          {/* <Tech technologies={project.technologies} /> */}
         </span>
         <div className="project__details__label">
           REPOS

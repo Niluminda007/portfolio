@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const About = () => {
   const leftTextBox = useRef();
   const textContainer = useRef();
-  const { toggleMenu } = useContext(AppContext);
+  const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
   const rootRef = useRef();
 
   const handleMouseMove = (e) => {
@@ -123,23 +123,37 @@ export const About = () => {
       ctx.revert();
     };
   }, []);
-
   return (
     <div className={`about ${toggleMenu ? "z-[0]" : "z-[100]"} `} ref={rootRef}>
-      <div className="about__header">
-        <div className="about__header-info" ref={textContainer}>
+      <div
+        className={`${
+          isTablet ? "flex-col" : ""
+        } about__header xs:flex-col xs:p-0`}
+      >
+        <div
+          className={`${isTablet ? "w-[90vw]" : ""} about__header-info`}
+          ref={textContainer}
+        >
           <div
             id="left-side"
-            className="about__haeder-info_right side"
+            className={`${
+              isTablet ? "w-[90vw] p-2" : ""
+            } about__haeder-info_right side`}
             ref={leftTextBox}
           >
             <h1
               id="heading1"
-              className="text-5xl  text-purple w-[60rem] flex justify-center"
+              className={`${
+                isTablet ? "w-[90vw]" : ""
+              } text-5xl  text-purple w-[60rem] flex justify-center xs:text-4xl`}
             >
               About Me
             </h1>
-            <p className="w-[50rem] text-white-100 mt-[-10rem] font-medium text-lg para">
+            <p
+              className={`${
+                isTablet ? "w-[90vw]" : ""
+              } w-[50rem] text-white-100 mt-[-10rem] font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}
+            >
               Hello there, I'm Ushan Niluminda. I love creating new and unique
               web desgins that get live on the internet. I started my way
               through web development couple of years ago. I think developing
@@ -149,15 +163,23 @@ export const About = () => {
           </div>
           <div
             id="right-side"
-            className="about__haeder-info_right side bg-purple"
+            className={`${
+              isTablet ? "w-[90vw] p-2" : ""
+            } about__haeder-info_right side bg-purple`}
           >
             <h1
               id="heading2"
-              className="text-5xl  text-white w-[60rem] flex justify-center "
+              className={`${
+                isTablet ? "w-[90vw]" : ""
+              } text-5xl  text-white w-[60rem] flex justify-center xs:text-4xl`}
             >
               About Me
             </h1>
-            <p className="w-[50rem] mt-[-10rem] text-black-100 font-medium text-lg para">
+            <p
+              className={`${
+                isTablet ? "w-[90vw]" : ""
+              } w-[50rem] mt-[-10rem] text-black-100 font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}
+            >
               Hello there, I'm Ushan Niluminda. I love creating new and unique
               web desgins that get live on the internet. I started my way
               through web development couple of years ago. I think developing
@@ -166,7 +188,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="about__header-info_image">
+        <div className={`${isTablet ? "" : ""} about__header-info_image`}>
           <PolodoidCanvas />
         </div>
         <ScrollButton />
@@ -182,7 +204,7 @@ export const About = () => {
           styleClass="text-white text-3xl  flex justify-center mb-10 hover:bg-purple hover:text-white cursor-default"
           isNormal={true}
         />
-        <Skills technologies={technologies} />
+        <Skills technologies={technologies} name="about" />
         <a href={resume} download="Resume" className="resume-link">
           <button className="w-[16rem] h-16 bg-purple text-white mt-12 text-lg pointer-cursor hover:text-purple hover:bg-dark hover:border-x-4">
             Download Resume

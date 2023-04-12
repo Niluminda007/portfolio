@@ -69,17 +69,3 @@
   transform: translateY(115px);
   transition: transform 0.5s;
 }
-
-/* .para {
-  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-}
-@keyframes reveal {
-  0% {
-    transform: translate(0, 200%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-} */

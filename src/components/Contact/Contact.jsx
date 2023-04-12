@@ -34,20 +34,17 @@ export const Contact = () => {
         !toggleMenu ? "z-[2]" : "z-[10]"
       } w-[100vw] h-[100vh] absolute inset-0 top-[0]`}
     >
-      {/* <div className=" absolute z-[100] right-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
-        <ContactForm />
-      </div> */}
       {!clicked && (
         <div
           ref={ref}
-          className="h-[800px] w-[800px] absolute z-[100] inset-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+          className="h-[80vh] w-[80vw] absolute z-[100] inset-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
           onClick={handleClick}
         >
           <ComputerCanvas />
         </div>
       )}
       {clicked && (
-        <div className=" absolute z-[100] right-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+        <div className=" absolute z-[100] right-0 top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] xs:w-[80vw] xs:top-[58%]">
           <ContactForm />
         </div>
       )}

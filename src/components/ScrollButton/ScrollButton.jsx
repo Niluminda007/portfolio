@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 export const ScrollButton = () => {
   const handleClick = () => {};
   return (
-    <div className="absolute xs:bottom-10 -bottom-20 w-full flex justify-center items-center ">
+    <div className="absolute xs:-bottom-[10rem] -bottom-20 w-full flex justify-center items-center ">
       <a href="#about-tech">
         <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
           <motion.div

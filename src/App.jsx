@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import { About } from "./components/About/About";
 import { Contact } from "./components/Contact/Contact";
 import { ProjectsLayout } from "./components/ProjectsLayout/ProjectsLayout";
+import TechIcon from "./components/TechIcon/TechIcon";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="projects/:projectId" element={<ProjectsLayout />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="test" element={<TechIcon />} />
         </Route>
       </Routes>
     </BrowserRouter>

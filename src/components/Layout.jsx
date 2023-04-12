@@ -12,7 +12,7 @@ const Layout = () => {
   useEffect(() => {
     const mediaQueryMobile = window.matchMedia("(max-width: 500px)");
     const mediaQueryTablet = window.matchMedia(
-      "(min-width: 500px, max-width: 1200px)"
+      "(min-width: 501px) and (max-width: 1300px)"
     );
     setIsMobile(mediaQueryMobile.matches);
     setIsTablet(mediaQueryTablet.matches);

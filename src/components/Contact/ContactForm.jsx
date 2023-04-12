@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { styles } from "../../styles";
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import { gsap } from "gsap";
+import { AppContext } from "../../context/context";
 export const ContactForm = () => {
   const rootRef = useRef(null);
   const formRef = useRef();
@@ -12,6 +13,7 @@ export const ContactForm = () => {
     message: "",
   });
   const [laoding, setLoading] = useState(false);
+  const { isMobile, isTablet } = useContext(AppContext);
   const handleChange = (e) => {
     const {
       target: { name, value },
@@ -80,7 +82,9 @@ export const ContactForm = () => {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="mt-12 flex flex-col gap-8"
+        className={`${
+          isMobile ? "gap-2 mt-4" : isTablet ? "gap-4 mt-5" : "gap-8 mt-12"
+        }  flex flex-col xs:mt-5`}
       >
         <label className="flex flex-col">
           <span className="text-white font-medium mb-4">Your Name</span>
@@ -107,7 +111,7 @@ export const ContactForm = () => {
         <label className="flex flex-col">
           <span className="text-white font-medium mb-4">Your Message</span>
           <textarea
-            rows="7"
+            rows={isMobile ? "4" : isTablet ? "4" : "7"}
             name="message"
             value={form.message}
             onChange={handleChange}

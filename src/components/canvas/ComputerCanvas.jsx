@@ -1,12 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Html, useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { Text } from "./Text";
+import { AppContext } from "../../context/context";
 
 const Computer = () => {
   const computer = useGLTF("./display/scene.gltf");
-
+  const { isMobile, isTablet } = useContext(AppContext);
   return (
     <mesh>
       <group>
@@ -22,12 +23,20 @@ const Computer = () => {
         <pointLight intensity={1} />
         <primitive
           object={computer.scene}
-          scale={2.5}
+          scale={isMobile ? 1.5 : isTablet ? 2.4 : 3}
           position={[0, -1, 0]}
           rotation={[0, -0.5, 0]}
         />
-        <Html position={[-15, -2, -6]}>
-          <Text />
+        <Html
+          position={
+            isMobile
+              ? [-10, -1.5, -6]
+              : isTablet
+              ? [-12, -0.5, -6]
+              : [-15, -1, -6]
+          }
+        >
+          <Text isMobile={isMobile} isTablet={isTablet} />
         </Html>
       </group>
     </mesh>
