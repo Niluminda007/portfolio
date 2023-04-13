@@ -49,17 +49,9 @@ body {
   );
 }
 .heading-text-shadow {
-  animation: text-animation 1s ease-in-out infinite alternate;
+  text-shadow: 3px 3px 20px #804dee, -2px 1px 30px #804dee;
 }
 
-@keyframes text-animation {
-  0% {
-    text-shadow: 0 0 0 #804dee, -0 0 0 #804dee;
-  }
-  100% {
-    text-shadow: 3px 3px 20px #804dee, -2px 1px 30px #804dee;
-  }
-}
 .image-filter {
   filter: sepia(100%) hue-rotate(222deg);
 }
