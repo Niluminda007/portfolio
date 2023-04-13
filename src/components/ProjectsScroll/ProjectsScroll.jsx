@@ -42,11 +42,19 @@ export const ProjectsScroll = () => {
           toggleMenu ? "z-[0]" : "z-[30]"
         }  fixed top-[7.5rem] bg-[dark] flex gap-10  justify-center items-center`}
       >
-        <div className="wrapper overflow-x-hidden relative h-[100vh] w-[100vw]">
+        <div
+          className={`${
+            isMobile
+              ? "overflow-x-scroll overflow-y-hidden"
+              : isTablet
+              ? ""
+              : "overflow-x-hidden"
+          }wrapper  relative h-[100vh] w-[100vw]`}
+        >
           <div
             ref={rootRef}
             className={`${
-              isMobile ? "w-[360vw]" : isTablet ? "w-[360vw]" : " w-[240vw]"
+              isMobile ? "w-[360vw] " : isTablet ? "w-[360vw]" : "w-[240vw]"
             } container h-[80vh] flex`}
           >
             {projectsCoverDetails.map((item, index) => {
