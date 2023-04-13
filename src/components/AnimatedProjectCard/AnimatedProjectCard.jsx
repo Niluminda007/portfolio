@@ -15,8 +15,8 @@ export const AnimatedProjectCard = ({ item: { url, name, path } }) => {
             ? "-translate-x-[40%] top-[14rem]"
             : isTablet
             ? "-translate-x-[65%] bottom-[10rem]"
-            : "-translate-x-[70%] bottom-[8rem] animate-text-animation"
-        } uppercase cursor-default text-white text-center -rotate-90  text-4xl absolute`}
+            : "-translate-x-[70%] bottom-[8rem]"
+        } uppercase cursor-default text-white text-center -rotate-90  text-4xl absolute animate-text-animation`}
       />
       <Link to={path}>
         <div
