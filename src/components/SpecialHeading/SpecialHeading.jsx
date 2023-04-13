@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { AppContext } from "../../context/context";
 import "./specialHeading.css";
-
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 export const SpecialHeading = ({
@@ -16,7 +15,7 @@ export const SpecialHeading = ({
   const iterationRef = useRef(0);
   const intervalRef = useRef(null);
   const targetRef = useRef(null);
-  const { SettoggleMenu } = useContext(AppContext);
+  const { SettoggleMenu, isMobile, isTablet } = useContext(AppContext);
 
   useEffect(() => {
     const animate = () => {
@@ -69,7 +68,9 @@ export const SpecialHeading = ({
   } else {
     return (
       <Link
-        className={`${styleClass} specialHeading sm:text-[3rem] md:text-[4rem] xs:text-[2rem] text-[5rem] pl-4 w-[40%]  rounded-l`}
+        className={`${styleClass} ${
+          isMobile ? "w-[110%]" : isTablet ? "w-[60%]" : "w-[40%]"
+        } specialHeading sm:text-[3rem] md:text-[4rem] xs:text-[2rem] text-[5rem] pl-4 rounded-l`}
         ref={targetRef}
         onMouseOver={handleHover}
         to={path}

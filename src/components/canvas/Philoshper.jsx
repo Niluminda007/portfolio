@@ -1,9 +1,11 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../CanvasLoader/CanvasLoader";
-const Philoshper = ({ isMobile }) => {
+import { AppContext } from "../../context/context";
+const Philoshper = () => {
   const philoshper = useGLTF("./philoshper/scene.gltf");
+  const { isMobile, isTablet } = useContext(AppContext);
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
@@ -18,8 +20,10 @@ const Philoshper = ({ isMobile }) => {
       <pointLight intensity={0.2} />
       <primitive
         object={philoshper.scene}
-        scale={isMobile ? 0.9 : 1.5}
-        position={isMobile ? [-2, -3.9, 0] : [-2, -4.6, -3]}
+        scale={isMobile ? 0.8 : isTablet ? 1.2 : 1.5}
+        position={
+          isMobile ? [-0.5, -3.9, 0] : isTablet ? [3, -3.9, -3] : [-2, -4.6, -3]
+        }
         rotation={[0, 1.2, 0]}
       />
     </mesh>

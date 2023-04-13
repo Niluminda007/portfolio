@@ -1,7 +1,6 @@
 import React from "react";
 import { styles } from "../../styles";
 import { PhiloshperCanvas } from "../canvas";
-
 import "./hero.css";
 
 export const Hero = () => {
@@ -15,7 +14,7 @@ export const Hero = () => {
         <div className="hero__intro-bio">
           <div className="flex">
             <h1 className={`hero__intro-bio_heading ${styles.heroHeadText}`}>
-              Hi, I'm&nbsp;
+              Hi,I'm &nbsp;
             </h1>
             <span
               className={`${styles.heroHeadText} hero__intro-bio_heading-span`}

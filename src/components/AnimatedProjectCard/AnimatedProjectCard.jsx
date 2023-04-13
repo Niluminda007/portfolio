@@ -12,9 +12,9 @@ export const AnimatedProjectCard = ({ item: { url, name, path } }) => {
         heading={{ nav_name: name, path: path }}
         styleClass={`${
           isMobile
-            ? "-translate-x-[40%] top-[14rem]"
+            ? "-translate-x-[40%] top-[14rem] heading-text-shadow"
             : isTablet
-            ? "-translate-x-[65%] bottom-[10rem]"
+            ? "-translate-x-[65%] bottom-[10rem] heading-text-shadow"
             : "-translate-x-[70%] bottom-[8rem] animate-text-animation"
         } uppercase cursor-default text-white text-center -rotate-90  text-4xl absolute`}
       />
@@ -22,7 +22,7 @@ export const AnimatedProjectCard = ({ item: { url, name, path } }) => {
         <div
           className={`${
             isMobile
-              ? "w-[75vw] aspect-[10/16] ml-16"
+              ? "w-[75vw] aspect-[11/16] ml-16"
               : isTablet
               ? "w-[250px] aspect-[10/16]"
               : "w-[450px] aspect-[12/16]"

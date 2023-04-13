@@ -87,14 +87,22 @@ export const GridImageGallery = ({ images }) => {
       <div
         className={`${
           !isOverlayOpen
-            ? "w-[5px] h-[5px] opacity-0 z-[0]"
+            ? "w-[5px] h-[5px] opacity-0 z-[-1]"
             : "z-[100] w-[40vw] h-auto"
-        } overlay absolute  bg-[rgba(128,43,177,0.2)] p-14`}
+        } overlay absolute  bg-[rgba(128,43,177,0.2)] p-14 ${
+          isMobile && isOverlayOpen
+            ? "!w-[90vw]"
+            : isTablet && isOverlayOpen
+            ? "!w-[50vw] right-2 top-[15rem]"
+            : ""
+        }`}
       >
         <div className="close" onClick={handleOverlay}></div>
         <img
           src={images[activeImageIndex]}
-          className="active-image h-auto object-contain"
+          className={`${
+            isMobile ? "scale-[1.2]" : isTablet ? "" : ""
+          } active-image h-auto object-contain`}
           draggable={false}
         />
       </div>
