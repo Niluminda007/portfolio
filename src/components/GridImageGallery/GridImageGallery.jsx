@@ -9,7 +9,7 @@ const gridPatterns = [
   { pattern: [3, 3], total: 9 },
 ];
 
-export const GridImageGallery = ({ images }) => {
+export const GridImageGallery = ({ images, id }) => {
   const { isMobile, isTablet } = useContext(AppContext);
   const getCurrentGridLength = (list) => {
     if (list.length > 4) return 9;
@@ -39,6 +39,8 @@ export const GridImageGallery = ({ images }) => {
       });
     }
   }, [isOverlayOpen, activeImageIndex]);
+  const gridItemSize =
+    (isMobile || isTablet) && id === "e-resource" ? "100px" : "170px";
 
   return (
     <div
@@ -49,8 +51,8 @@ export const GridImageGallery = ({ images }) => {
       <div
         className={`${isMobile ? "" : isTablet ? "" : "rotate-[45deg]"} grid`}
         style={{
-          gridTemplateColumns: `repeat(${currentGridPattern.pattern[0]}, 170px)`,
-          gridTemplateRows: `repeat(${currentGridPattern.pattern[0]}, 170px)`,
+          gridTemplateColumns: `repeat(${currentGridPattern.pattern[0]}, ${gridItemSize})`,
+          gridTemplateRows: `repeat(${currentGridPattern.pattern[0]}, ${gridItemSize})`,
         }}
       >
         {Array.from({ length: currentGridPattern.total }).map((_, index) => {

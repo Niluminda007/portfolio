@@ -4,6 +4,7 @@ import Tech from "../Tech/Tech";
 import { GridImageGallery } from "../GridImageGallery/GridImageGallery";
 import { Skills } from "../Skills/Skills";
 import { AppContext } from "../../context/context";
+import ShortDescription from "../ShortenDescription/ShortDescription";
 
 export const Project = ({ project }) => {
   const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
@@ -43,15 +44,16 @@ export const Project = ({ project }) => {
               BIO
               <span className="project__details__label-bar"></span>
             </div>
-            <span
+            <ShortDescription description={project.description} />
+            {/* <span
               id="bio"
               className="project__details__text project__details__text-small"
             >
               {project.description}
-            </span>
+            </span> */}
           </div>
 
-          <GridImageGallery images={project.imgUrls} />
+          <GridImageGallery images={project.imgUrls} id={project.id} />
         </div>
 
         <div className="project__details__label">
