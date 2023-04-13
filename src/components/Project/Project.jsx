@@ -8,7 +8,11 @@ import { AppContext } from "../../context/context";
 export const Project = ({ project }) => {
   const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
   return (
-    <div className={`${toggleMenu ? "z-[0]" : "z-[100]"} project`}>
+    <div
+      className={`${toggleMenu ? "z-[0]" : "z-[100]"} project ${
+        isMobile ? "p-4" : isTablet ? "p-8" : "p-16"
+      }`}
+    >
       <div className="project__details">
         <div className="project__details__label">
           Name
@@ -21,16 +25,35 @@ export const Project = ({ project }) => {
           {project.name}
         </span>
 
-        <div className="project__details__label">
-          BIO
-          <span className="project__details__label-bar"></span>
-        </div>
-        <span
-          id="bio"
-          className="project__details__text project__details__text-small"
+        <div
+          className={`${
+            isMobile
+              ? "flex-col"
+              : isTablet
+              ? "flex-row gap-32"
+              : "flex-row w-[80vw]"
+          } flex justify-between`}
         >
-          {project.description}
-        </span>
+          <div
+            className={`${
+              isMobile ? "" : isTablet ? "w-[40vw]" : "w-[40vw] my-10"
+            }`}
+          >
+            <div className="project__details__label">
+              BIO
+              <span className="project__details__label-bar"></span>
+            </div>
+            <span
+              id="bio"
+              className="project__details__text project__details__text-small"
+            >
+              {project.description}
+            </span>
+          </div>
+
+          <GridImageGallery images={project.imgUrls} />
+        </div>
+
         <div className="project__details__label">
           TECHNOLOGIES
           <span className="project__details__label-bar"></span>
@@ -72,7 +95,6 @@ export const Project = ({ project }) => {
           </div>
         </span>
       </div>
-      <GridImageGallery images={project.imgUrls} />
     </div>
   );
 };

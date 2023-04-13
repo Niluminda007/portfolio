@@ -3,7 +3,6 @@
   perspective: 600px;
   display: grid;
   grid-gap: 25px;
-  transform: rotate(45deg);
 }
 .img {
   background: white;

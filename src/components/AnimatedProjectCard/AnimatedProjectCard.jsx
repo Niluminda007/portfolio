@@ -36,8 +36,8 @@ export const AnimatedProjectCard = ({ item: { url, name, path } }) => {
               backgroundPosition: "0% 0%",
             }}
             className={`${
-              isMobile ? "" : isTablet ? "" : "animate-image-animation"
-            } absolute h-[100%] w-[100%]  image-filter opacity-[.8]`}
+              isMobile ? "" : isTablet ? "" : ""
+            } absolute h-[100%] w-[100%]  image-filter opacity-[.8] animate-image-animation`}
           ></div>
           <div
             className={`${

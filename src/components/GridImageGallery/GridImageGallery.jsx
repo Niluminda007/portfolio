@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import "./gallery.css";
 import { useState } from "react";
 import { gsap } from "gsap";
+import { AppContext } from "../../context/context";
 
 const gridPatterns = [
   { pattern: [2, 2], total: 4 },
@@ -9,7 +10,7 @@ const gridPatterns = [
 ];
 
 export const GridImageGallery = ({ images }) => {
-  //   const images = projects[1].imgUrls;
+  const { isMobile, isTablet } = useContext(AppContext);
   const getCurrentGridLength = (list) => {
     if (list.length > 4) return 9;
     return 4;
@@ -40,13 +41,16 @@ export const GridImageGallery = ({ images }) => {
   }, [isOverlayOpen, activeImageIndex]);
 
   return (
-    <div className="layout flex-[.5] flex items-center z-[100] relative justify-center">
+    <div
+      className={`${
+        isMobile ? "" : isTablet ? "" : "absolute right-0"
+      } layout flex items-center z-[100] justify-center my-16`}
+    >
       <div
-        className="grid "
+        className={`${isMobile ? "" : isTablet ? "" : "rotate-[45deg]"} grid`}
         style={{
           gridTemplateColumns: `repeat(${currentGridPattern.pattern[0]}, 170px)`,
           gridTemplateRows: `repeat(${currentGridPattern.pattern[0]}, 170px)`,
-          marginTop: "-500px",
         }}
       >
         {Array.from({ length: currentGridPattern.total }).map((_, index) => {
