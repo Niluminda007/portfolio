@@ -47,7 +47,7 @@ export const ProjectsScroll = () => {
             isMobile
               ? "overflow-x-scroll overflow-y-hidden"
               : isTablet
-              ? ""
+              ? "overflow-x-scroll overflow-y-hidden"
               : "overflow-x-hidden"
           }wrapper  relative h-[100vh] w-[100vw]`}
         >
