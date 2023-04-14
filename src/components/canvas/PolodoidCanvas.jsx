@@ -26,8 +26,8 @@ export const PolodoidCanvas = () => {
         <OrbitControls
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          minAzimuthAngle={-Math.PI / 3}
-          maxAzimuthAngle={Math.PI / 3}
+          // minAzimuthAngle={-Math.PI / 3}
+          // maxAzimuthAngle={Math.PI / 3}
           enableZoom={false}
         />
         <PolodoidPhoto />
