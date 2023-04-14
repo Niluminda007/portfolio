@@ -103,7 +103,7 @@ export const GridImageGallery = ({ images, id }) => {
         <img
           src={images[activeImageIndex]}
           className={`${
-            isMobile ? "scale-[1.2]" : isTablet ? "" : ""
+            isMobile ? "scale-[1.1]" : isTablet ? "" : ""
           } active-image h-auto object-contain`}
           draggable={false}
         />

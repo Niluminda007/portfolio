@@ -8,6 +8,8 @@ import {
   mongodb,
   docker,
   liveIcon,
+  tailwind,
+  web3,
 } from "../assets";
 
 export const projects = [
@@ -158,6 +160,10 @@ export const projects = [
         name: "React JS",
         icon: reactjs,
       },
+      {
+        name: "Tailwind",
+        icon: tailwind,
+      },
     ],
     description:
       "This is a Web3 Application that can used to transfer test ethereum.You can connect your meta mask account and send ethereum throught the world",
@@ -205,6 +211,10 @@ export const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "web3",
+    icon: web3,
   },
 ];
 

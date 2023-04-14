@@ -6,6 +6,7 @@ import { AppContext } from "../../context/context";
 const Philoshper = () => {
   const philoshper = useGLTF("./philoshper/scene.gltf");
   const { isMobile, isTablet } = useContext(AppContext);
+  console.log(isTablet);
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
@@ -20,9 +21,13 @@ const Philoshper = () => {
       <pointLight intensity={0.2} />
       <primitive
         object={philoshper.scene}
-        scale={isMobile ? 0.8 : isTablet ? 1.2 : 1.5}
+        scale={isMobile ? 0.8 : isTablet ? 1.3 : 1.5}
         position={
-          isMobile ? [-0.5, -3.9, 0] : isTablet ? [3, -3.9, -3] : [-2, -4.6, -3]
+          isMobile
+            ? [-0.5, -3.9, 0]
+            : isTablet
+            ? [-12, -5, -3]
+            : [-2, -4.6, -4.5]
         }
         rotation={[0, 1.2, 0]}
       />

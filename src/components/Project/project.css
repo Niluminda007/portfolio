@@ -2,7 +2,6 @@
   display: flex;
   position: absolute;
   top: 120px;
-
   justify-content: space-between;
 }
 
@@ -31,7 +30,7 @@
   font-size: 1.2rem;
   color: white;
   padding-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   letter-spacing: 1px;
   opacity: 1;
   animation: OPACITY_FRAME 0.8s;

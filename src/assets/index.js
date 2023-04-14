@@ -12,6 +12,7 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import web3 from "./tech/web3.png";
 import liveIcon from "./liveIcon.png";
 export {
   github,
@@ -29,4 +30,5 @@ export {
   typescript,
   threejs,
   liveIcon,
+  web3,
 };
