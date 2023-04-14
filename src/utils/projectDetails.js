@@ -133,11 +133,13 @@ export const projects = [
     },
   },
   {
-    id: "todo",
-    name: "Todo App",
+    id: "krypto",
+    name: "Web 3 Krypto App",
     imgUrls: [
-      "/portfolio/work/work-inside/todo/todo_1.jpg",
-      "/portfolio/work/work-inside/todo/todo_2.jpg",
+      "/portfolio/work/work-inside/crypto/crypto_1.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_2.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_3.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_5.JPG",
     ],
     technologies: [
       {
@@ -158,12 +160,12 @@ export const projects = [
       },
     ],
     description:
-      "This is a simple todo application where the user is able to add todos and keep track of them by checking the compleed tods",
+      "This is a Web3 Application that can used to transfer test ethereum.You can connect your meta mask account and send ethereum throught the world",
     repo: {
       img: github,
-      url: "https://github.com/Niluminda007/react-todo-simple",
+      url: "https://github.com/Niluminda007/web3Krypto",
     },
-    demo: { img: liveIcon, url: "" },
+    demo: { img: liveIcon, url: "https://niluminda007.github.io/web3Krypto/" },
   },
 ];
 
@@ -221,9 +223,9 @@ export const projectsCoverDetails = [
   },
   {
     index: 3,
-    name: "Todo",
-    url: "./work/work-cover/todo.jpg",
-    path: "/portfolio/projects/todo",
+    name: "Krypto",
+    url: "./work/work-cover/crypto.jpg",
+    path: "/portfolio/projects/krypto",
   },
   {
     index: 4,
