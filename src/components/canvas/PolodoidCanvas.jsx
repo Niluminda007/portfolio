@@ -39,9 +39,10 @@
 import React, { useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, useGLTF, OrbitControls } from "@react-three/drei";
+import { Suspense } from "react";
 
 const PolodoidPhoto = () => {
-  const photo = useGLTF("./polaroid/Sketchfab_Scene.glb");
+  const photo = useGLTF("./photPolaroid/scene.gltf");
   return (
     <>
       <Environment preset="warehouse" />
@@ -64,7 +65,9 @@ export const PolodoidCanvas = () => {
         minPolarAngle={Math.PI / 2}
         enableZoom={false}
       />
-      <PolodoidPhoto />
+      <Suspense fallback={null}>
+        <PolodoidPhoto />
+      </Suspense>
     </Canvas>
   );
 };
