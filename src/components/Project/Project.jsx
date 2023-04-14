@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./project.css";
-import Tech from "../Tech/Tech";
 import { GridImageGallery } from "../GridImageGallery/GridImageGallery";
 import { Skills } from "../Skills/Skills";
 import { AppContext } from "../../context/context";
@@ -45,12 +44,6 @@ export const Project = ({ project }) => {
               <span className="project__details__label-bar"></span>
             </div>
             <ShortDescription description={project.description} />
-            {/* <span
-              id="bio"
-              className="project__details__text project__details__text-small"
-            >
-              {project.description}
-            </span> */}
           </div>
 
           <GridImageGallery images={project.imgUrls} id={project.id} />
@@ -65,7 +58,6 @@ export const Project = ({ project }) => {
           className="project__details__text project__details__text-small"
         >
           <Skills technologies={project.technologies} name="project" />
-          {/* <Tech technologies={project.technologies} /> */}
         </span>
         <div className="project__details__label">
           REPOS

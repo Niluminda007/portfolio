@@ -97,7 +97,7 @@ export const GridImageGallery = ({ images, id }) => {
             : isTablet && isOverlayOpen
             ? "!w-[50vw] right-2 top-[15rem]"
             : ""
-        }`}
+        } flex justify-center`}
       >
         <div className="close" onClick={handleOverlay}></div>
         <img

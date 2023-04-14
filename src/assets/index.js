@@ -13,6 +13,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import liveIcon from "./liveIcon.png";
+import web3 from "./tech/web-3.png";
 export {
   github,
   css,
@@ -29,4 +30,5 @@ export {
   typescript,
   threejs,
   liveIcon,
+  web3,
 };

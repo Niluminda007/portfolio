@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CustomCursor } from "./components/CustomCursor/CustomCursor";
 import { Hero } from "./components/Hero/Hero";
 import StarsCanvas from "./components/canvas/StarFall";
 import { ProjectsScroll } from "./components/ProjectsScroll/ProjectsScroll";
@@ -7,7 +6,6 @@ import Layout from "./components/Layout";
 import { About } from "./components/About/About";
 import { Contact } from "./components/Contact/Contact";
 import { ProjectsLayout } from "./components/ProjectsLayout/ProjectsLayout";
-import TechIcon from "./components/TechIcon/TechIcon";
 
 const App = () => {
   return (
@@ -27,7 +25,6 @@ const App = () => {
           <Route path="projects/:projectId" element={<ProjectsLayout />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="test" element={<TechIcon />} />
         </Route>
       </Routes>
     </BrowserRouter>

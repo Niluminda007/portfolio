@@ -70,7 +70,7 @@
   content: " ";
   height: 33px;
   width: 2px;
-  background-color: #333;
+  background-color: #fff;
 }
 .close:before {
   transform: rotate(45deg);

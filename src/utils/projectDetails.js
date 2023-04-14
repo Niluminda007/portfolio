@@ -8,6 +8,8 @@ import {
   mongodb,
   docker,
   liveIcon,
+  tailwind,
+  web3,
 } from "../assets";
 
 export const projects = [
@@ -133,11 +135,13 @@ export const projects = [
     },
   },
   {
-    id: "todo",
-    name: "Todo App",
+    id: "krypto",
+    name: "Web 3 Krypto App",
     imgUrls: [
-      "/portfolio/work/work-inside/todo/todo_1.jpg",
-      "/portfolio/work/work-inside/todo/todo_2.jpg",
+      "/portfolio/work/work-inside/crypto/crypto_1.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_2.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_3.JPG",
+      "/portfolio/work/work-inside/crypto/crypto_5.JPG",
     ],
     technologies: [
       {
@@ -156,22 +160,23 @@ export const projects = [
         name: "React JS",
         icon: reactjs,
       },
+      {
+        name: "Tailwind",
+        icon: tailwind,
+      },
+      {
+        name: "Web3",
+        icon: web3,
+      },
     ],
     description:
-      "This is a simple todo application where the user is able to add todos and keep track of them by checking the compleed tods",
+      "This is a Web3 Application that can used to transfer test ethereum.You can connect your meta mask account and send ethereum throught the world",
     repo: {
       img: github,
-      url: "https://github.com/Niluminda007/react-todo-simple",
+      url: "https://github.com/Niluminda007/web3Krypto",
     },
-    demo: { img: liveIcon, url: "" },
+    demo: { img: liveIcon, url: "https://niluminda007.github.io/web3Krypto/" },
   },
-];
-
-export const projectCoverImages = [
-  { index: 1, name: "e-commerce", url: "./work/work-cover/e-commerce.png" },
-  { index: 2, name: "e-resource", url: "./work/work-cover/e-resource.jpg" },
-  { index: 3, name: "todo", url: "./work/work-cover/todo.jpg" },
-  { index: 4, name: "wordle", url: "./work/work-cover/wordle-2.jpg" },
 ];
 
 export const technologies = [
@@ -204,6 +209,10 @@ export const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "Web3",
+    icon: web3,
+  },
 ];
 
 export const projectsCoverDetails = [
@@ -221,14 +230,14 @@ export const projectsCoverDetails = [
   },
   {
     index: 3,
-    name: "Todo",
-    url: "./work/work-cover/todo.jpg",
-    path: "/portfolio/projects/todo",
+    name: "wordle",
+    url: "./work/work-cover/wordle-2.jpg",
+    path: "/portfolio/projects/wordle",
   },
   {
     index: 4,
-    name: "Wordle",
-    url: "./work/work-cover/wordle-2.jpg",
-    path: "/portfolio/projects/wordle",
+    name: "Krypto",
+    url: "./work/work-cover/crypto.jpg",
+    path: "/portfolio/projects/krypto",
   },
 ];
