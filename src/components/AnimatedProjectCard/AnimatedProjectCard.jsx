@@ -24,7 +24,7 @@ export const AnimatedProjectCard = ({ item: { url, name, path } }) => {
             isMobile
               ? "w-[75vw] aspect-[11/16] ml-16"
               : isTablet
-              ? "w-[250px] aspect-[10/16]"
+              ? "w-[65vw] aspect-[10/16]"
               : "w-[450px] aspect-[12/16]"
           } screen relative overflow-hidden  border-solid border-3 border-[rgba(128,43,177,.7)] rounded-2xl bg bg-[rgba(128,43,177,.15)]`}
         >

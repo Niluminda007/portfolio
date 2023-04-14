@@ -14,7 +14,7 @@ export const ProjectsScroll = () => {
       const sections = gsap.utils.toArray(".container section");
       gsap.to(sections, {
         xPercent:
-          (isMobile ? -120 : isTablet ? -120 : -100) * (sections.length - 1),
+          (isMobile ? -120 : isTablet ? -150 : -100) * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
           trigger: ".wrap",

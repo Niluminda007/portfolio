@@ -52,7 +52,7 @@
 
 .close {
   position: absolute;
-  /* right: 32px; */
+  right: 32px;
   top: 10px;
   width: 32px;
   height: 32px;

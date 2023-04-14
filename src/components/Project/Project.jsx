@@ -30,7 +30,7 @@ export const Project = ({ project }) => {
             isMobile
               ? "flex-col"
               : isTablet
-              ? "flex-row gap-32"
+              ? "flex-row gap-16"
               : "flex-row w-[80vw]"
           } flex justify-between`}
         >
