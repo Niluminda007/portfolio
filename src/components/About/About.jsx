@@ -26,14 +26,16 @@ export const About = () => {
       leftTextBox.current.style.width = `${percentage}%`;
     }
   };
+
   useEffect(() => {
     const element = textContainer.current;
-
+    // document.body.classList.add("control-overflow");
     if (!element) return;
     element.onmousemove = (e) => handleMouseMove(e);
 
     return () => {
       element.removeEventListener("onmousemove", handleMouseMove);
+      // document.body.classList.remove("control-overflow");
     };
   }, []);
   useEffect(() => {

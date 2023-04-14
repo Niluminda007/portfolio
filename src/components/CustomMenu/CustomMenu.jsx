@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useRef, useLayoutEffect } from "react";
 import { SpecialHeading } from "../SpecialHeading/SpecialHeading";
 import "./customMenu.css";
 import { navLinks } from "../../utils/navLinks";
-import { useContext } from "react";
 import { AppContext } from "../../context/context";
 export const CustomMenu = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
-
+  const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
   const handleMouseOver = (index) => {
     setActiveIndex(index);
   };
-  const { toggleMenu, isMobile, isTablet } = useContext(AppContext);
 
   return (
     <div
       className={`menu ${
-        toggleMenu ? "opacity-100 z-[10000]" : "opacity-0 -z-[1]"
+        toggleMenu ? "opacity-100 z-[10000]" : "opacity-0 -z-[1] w-0"
       }  bg-[#121212] p-8 sm:p-4`}
     >
       <h1

@@ -58,10 +58,11 @@ export const ContactForm = () => {
       const tl = new gsap.timeline();
       tl.fromTo(
         rootRef.current,
-        { scale: 0.5 },
+        { scale: 0 },
         {
           duration: 1,
           scale: 1,
+          delay: 1,
           ease: "power3.out",
         }
       );

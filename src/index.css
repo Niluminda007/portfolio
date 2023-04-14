@@ -65,6 +65,38 @@ body {
     rgba(60, 51, 80, 0) 100%
   );
 }
+.social-background-normal {
+  background-image: linear-gradient(
+    55deg,
+    hsl(278deg 61% 43%) 1%,
+    hsl(278deg 61% 39%) 42%,
+    hsl(278deg 61% 35%) 49%,
+    hsl(278deg 61% 30%) 51%,
+    hsl(278deg 61% 26%) 51%,
+    hsl(278deg 60% 22%) 50%,
+    hsl(278deg 61% 17%) 49%,
+    hsl(278deg 61% 13%) 49%,
+    hsl(279deg 59% 9%) 51%,
+    hsl(279deg 64% 4%) 58%,
+    hsl(0deg 0% 0%) 99%
+  );
+}
+.social-background-hover {
+  background-image: linear-gradient(
+    120deg,
+    hsl(278deg 61% 43%) 1%,
+    hsl(278deg 61% 39%) 42%,
+    hsl(278deg 61% 35%) 49%,
+    hsl(278deg 61% 30%) 51%,
+    hsl(278deg 61% 26%) 51%,
+    hsl(278deg 60% 22%) 50%,
+    hsl(278deg 61% 17%) 49%,
+    hsl(278deg 61% 13%) 49%,
+    hsl(279deg 59% 9%) 51%,
+    hsl(279deg 64% 4%) 58%,
+    hsl(0deg 0% 0%) 99%
+  );
+}
 
 .green-pink-gradient {
   background: "#00cea8";
