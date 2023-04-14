@@ -9,6 +9,7 @@
   justify-content: center;
   gap: 20rem;
   padding-bottom: 20rem;
+  overflow-x: hidden;
 }
 .about__header {
   width: 100%;
