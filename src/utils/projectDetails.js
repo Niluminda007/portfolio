@@ -9,7 +9,6 @@ import {
   docker,
   liveIcon,
   tailwind,
-  web3,
 } from "../assets";
 
 export const projects = [
@@ -211,10 +210,6 @@ export const technologies = [
   {
     name: "docker",
     icon: docker,
-  },
-  {
-    name: "web3",
-    icon: web3,
   },
 ];
 
