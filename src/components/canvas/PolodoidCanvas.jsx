@@ -25,6 +25,8 @@ export const PolodoidCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         enableZoom={false}
+        minAzimuthAngle={-Math.PI / 3}
+        maxAzimuthAngle={Math.PI / 3}
       />
       <PolodoidPhoto />
     </Canvas>
