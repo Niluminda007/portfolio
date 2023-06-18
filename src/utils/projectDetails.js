@@ -172,6 +172,81 @@ export const projects = [
     },
     demo: { img: liveIcon, url: "https://niluminda007.github.io/web3Krypto/" },
   },
+  {
+    id: "wordle",
+    name: "Wordle Game",
+    imgUrls: [
+      "/portfolio/work/work-inside/wordle/wordle_1.JPG",
+      "/portfolio/work/work-inside/wordle/wordle_2.JPG",
+    ],
+    technologies: [
+      {
+        name: "HTML 5",
+        icon: html,
+      },
+      {
+        name: "CSS 3",
+        icon: css,
+      },
+      {
+        name: "JavaScript",
+        icon: javascript,
+      },
+      {
+        name: "React JS",
+        icon: reactjs,
+      },
+    ],
+    description:
+      "This is a simple game of worlde where the player is prompted to guess a 5 letter word and gets 5 tires to guess it",
+    repo: {
+      img: github,
+      url: "https://github.com/Niluminda007/Worlde-React",
+    },
+    demo: {
+      img: liveIcon,
+      url: "https://niluminda007.github.io/Worlde-React/",
+    },
+  },
+  {
+    id: "dalle",
+    name: "DaLL-E Clone",
+    imgUrls: [
+      "/portfolio/work/work-inside/dalle/dalle_1.JPG",
+      "/portfolio/work/work-inside/dalle/dalle_2.JPG",
+      "/portfolio/work/work-inside/dalle/dalle_3.JPG",
+      "/portfolio/work/work-inside/dalle/dalle_4.JPG",
+    ],
+    technologies: [
+      {
+        name: "React JS",
+        icon: reactjs,
+      },
+      {
+        name: "Node Js",
+        icon: nodejs,
+      },
+      {
+        name: "HTML 5",
+        icon: html,
+      },
+      {
+        name: "Tailwind Css",
+        icon: tailwind,
+      },
+      {
+        name: "JavaScript",
+        icon: javascript,
+      },
+    ],
+    description:
+      "This a live like dalle clone, which can be used to generate images through a prompt. You can climb high as your imagination. You can generate a image then share it with community as well and enjoy each others work. The backend is hosted on renderer and for image optimization cloudinary cdn is used, to fetch and store images. The front end is powered wit react and tailwind css.",
+    repo: {
+      img: github,
+      url: "https://github.com/Niluminda007/DALLE-E",
+    },
+    demo: { img: liveIcon, url: "https://niluminda007.github.io/DALLE-E/" },
+  },
 ];
 
 export const projectCoverImages = [
@@ -179,6 +254,7 @@ export const projectCoverImages = [
   { index: 2, name: "e-resource", url: "./work/work-cover/e-resource.jpg" },
   { index: 3, name: "todo", url: "./work/work-cover/todo.jpg" },
   { index: 4, name: "wordle", url: "./work/work-cover/wordle-2.jpg" },
+  { index: 5, name: "Dalle", url: "./work/work-cover/dalle.jpg" },
 ];
 
 export const technologies = [
@@ -237,5 +313,11 @@ export const projectsCoverDetails = [
     name: "Wordle",
     url: "./work/work-cover/wordle-2.jpg",
     path: "/portfolio/projects/wordle",
+  },
+  {
+    index: 5,
+    name: "Dalle",
+    url: "./work/work-cover/dalle.jpg",
+    path: "/portfolio/projects/dalle",
   },
 ];

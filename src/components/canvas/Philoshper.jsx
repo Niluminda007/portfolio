@@ -6,7 +6,6 @@ import { AppContext } from "../../context/context";
 const Philoshper = () => {
   const philoshper = useGLTF("./philoshper/scene.gltf");
   const { isMobile, isTablet } = useContext(AppContext);
-  console.log(isTablet);
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
@@ -62,8 +61,7 @@ const PhiloshperCanvas = () => {
       frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
-    >
+      gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           maxPolarAngle={Math.PI / 2}

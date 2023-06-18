@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useContext } from "react";
 import "./about.css";
 import { AppContext } from "../../context/context";
-import { PolodoidCanvas } from "../canvas/PolodoidCanvas";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 import { ScrollButton } from "../ScrollButton/ScrollButton";
@@ -10,6 +9,7 @@ import { technologies } from "../../utils/projectDetails";
 import { SpecialHeading } from "../SpecialHeading/SpecialHeading";
 import resume from "../../assets/nilumindaCV.pdf";
 import { Skills } from "../Skills/Skills";
+import ProfilePhoto from "../ProfilePhoto/ProfilePhoto";
 
 gsap.registerPlugin(ScrollTrigger);
 export const About = () => {
@@ -130,32 +130,27 @@ export const About = () => {
       <div
         className={`${
           isTablet ? "flex-col" : ""
-        } about__header xs:flex-col xs:p-0`}
-      >
+        } about__header xs:flex-col xs:p-0`}>
         <div
           className={`${isTablet ? "w-[90vw]" : ""} about__header-info`}
-          ref={textContainer}
-        >
+          ref={textContainer}>
           <div
             id="left-side"
             className={`${
               isTablet ? "w-[90vw] p-2" : ""
             } about__haeder-info_right side`}
-            ref={leftTextBox}
-          >
+            ref={leftTextBox}>
             <h1
               id="heading1"
               className={`${
                 isTablet ? "w-[90vw]" : ""
-              } text-5xl  text-purple w-[60rem] flex justify-center xs:text-4xl`}
-            >
+              } text-5xl  text-purple w-[60rem] flex justify-center xs:text-4xl`}>
               About Me
             </h1>
             <p
               className={`${
                 isTablet ? "w-[90vw]" : ""
-              } w-[50rem] text-white-100 mt-[-10rem] font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}
-            >
+              } w-[50rem] text-white-100 mt-[-10rem] font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}>
               Hello there, I'm Ushan Niluminda. I love creating new and unique
               web desgins that get live on the internet. I started my way
               through web development couple of years ago. I think developing
@@ -167,21 +162,18 @@ export const About = () => {
             id="right-side"
             className={`${
               isTablet ? "w-[90vw] p-2" : ""
-            } about__haeder-info_right side bg-purple`}
-          >
+            } about__haeder-info_right side bg-purple`}>
             <h1
               id="heading2"
               className={`${
                 isTablet ? "w-[90vw]" : ""
-              } text-5xl  text-white w-[60rem] flex justify-center xs:text-4xl`}
-            >
+              } text-5xl  text-white w-[60rem] flex justify-center xs:text-4xl`}>
               About Me
             </h1>
             <p
               className={`${
                 isTablet ? "w-[90vw]" : ""
-              } w-[50rem] mt-[-10rem] text-black-100 font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}
-            >
+              } w-[50rem] mt-[-10rem] text-black-100 font-medium text-lg para xs:text-[1rem] xs:w-[80vw] xs:mt-0`}>
               Hello there, I'm Ushan Niluminda. I love creating new and unique
               web desgins that get live on the internet. I started my way
               through web development couple of years ago. I think developing
@@ -190,16 +182,15 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className={`${isTablet ? "" : ""} about__header-info_image`}>
-          <PolodoidCanvas />
+        <div className={`${isTablet ? "mt-8" : ""} about__header-info_image`}>
+          <ProfilePhoto />
         </div>
         <ScrollButton />
       </div>
 
       <div
         id="about-tech"
-        className="w-[100%] h-full bg-[transparent] smooth flex flex-col items-center "
-      >
+        className="w-[100%] h-full bg-[transparent] smooth flex flex-col items-center ">
         <SpecialHeading
           index="0"
           heading={{ nav_name: "My Tech Stack", path: "/" }}
